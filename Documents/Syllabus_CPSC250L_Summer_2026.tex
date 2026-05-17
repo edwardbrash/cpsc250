@@ -1,0 +1,317 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    urlcolor=blue!60!black
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CPSC 250L}
+\chead{Programming for Data Manipulation Lab}
+\rhead{Summer 2026}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\renewcommand{\arraystretch}{1.2}
+
+\titleformat{\section}{\large\bfseries\color{black}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\color{black}}{}{0em}{}
+
+\newcommand{\coursename}{CPSC 250L: Programming for Data Manipulation Lab}
+\newcommand{\semester}{Summer 2026}
+\newcommand{\instructor}{Dr. Edward J. Brash}
+\newcommand{\email}{edward.brash@cnu.edu}
+\newcommand{\office}{Luter 304}
+\newcommand{\phone}{594-7451}
+\newcommand{\officehours}{By appointment}
+\newcommand{\meetingtime}{Monday--Thursday, 1:00--3:00 pm}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{\coursename}}\\[0.5em]
+    {\large \semester}\\[0.75em]
+    \textit{This syllabus has been adapted from syllabuses developed previously by Dr. Conner, Dr. Phelps, Professor Perkins, and others.}
+\end{center}
+
+\vspace{0.5em}
+
+\begin{tabular}{@{}p{0.47\textwidth}p{0.47\textwidth}@{}}
+\textbf{Course:} CPSC 250L & \textbf{Instructor:} \instructor \\
+\textbf{Semester:} \semester & \textbf{Email:} \href{mailto:\email}{\email} \\
+\textbf{Office:} \office & \textbf{Phone:} \phone \\
+\textbf{Meeting Time:} \meetingtime & \textbf{Office Hours:} \officehours \\
+\end{tabular}
+
+\section{Course Goals}
+
+Both engineers and scientists need to understand computer programming as well as be able to program computers to solve problems in their fields. This laboratory course pairs with CPSC 250 and extends the foundations of computer programming using Python that were introduced in CPSC 150/150L. The course focuses on hands-on programming practice, algorithm development, data structure design, debugging, version control, and the professional software development workflows that are central to solving many practical engineering and science problems.
+
+Because this course is now taught in person, the laboratory is designed around active programming during scheduled class time. Students will write, test, debug, revise, commit, push, and demonstrate code during lab meetings.
+
+\section{Learning Objectives}
+
+By the end of this course, students should be able to:
+
+\begin{itemize}[itemsep=0.2em]
+    \item Write complete Python programs to solve engineering and science problems using top-down design.
+    \item Use high-quality programming standards to develop Python programs to solve practical problems.
+    \item Define and use the concepts of data types, arrays, classes, objects, and other complex data structures.
+    \item Implement object-oriented programming designs to solve practical problems.
+    \item Employ data visualization techniques to display and understand the behavior and underlying nature of complex data sets.
+    \item Use Git and GitHub as part of a professional programming workflow.
+    \item Explain, modify, debug, and extend code during live instructor checkoffs.
+\end{itemize}
+
+\section{Required Text and Course Resources}
+
+CPSC 250 uses a custom Zybooks text developed by others initially and optimized by me for this course. Students enrolled in CPSC 250L should also be enrolled in CPSC 250 and should have access to the CPSC 250 Zybook.
+
+\subsection{Instructions for the Class Zybook}
+
+\begin{enumerate}[itemsep=0.2em]
+    \item Sign in or create an account at \href{https://learn.zybooks.com}{learn.zybooks.com}.
+    \item Enter the zyBook code: \textbf{CNUCPSC250BrashSummer2026}.
+    \item Subscribe.
+\end{enumerate}
+
+A subscription is approximately \$89. I really do apologize for adding extra costs to your education. My only excuse is that I do very much think that this is an exceptional learning resource, and that you will get a lot out of it.
+
+\section{Required Materials}
+
+Students must bring a laptop computer to every laboratory session. Students are responsible for having:
+
+\begin{itemize}[itemsep=0.2em]
+    \item Python installed,
+    \item PyCharm Community Edition installed,
+    \item a GitHub account,
+    \item Git configured through PyCharm,
+    \item internet access capability,
+    \item administrator access to their laptop when installing software, and
+    \item access to the course GitHub repositories.
+\end{itemize}
+
+Detailed setup instructions are provided separately. The first laboratory meeting will be devoted to getting everyone operational.
+
+\section{Integrated Development Environment}
+
+My idealistic goal, at this point in time, is to encourage students to work in the operating system with which they are most comfortable: Linux, macOS, or Windows. With that said, we will use \textbf{PyCharm Community Edition} as the IDE. The underlying Python interpreter will vary depending on the operating system, and I have provided more detailed instructions in supplementary documents.
+
+Students will also use GitHub and git throughout the course. The lab repository will be distributed through GitHub, and students will complete work in their own forked repositories.
+
+\section{Laboratory Format}
+
+This course is an in-person programming laboratory that accompanies CPSC 250. Students will spend scheduled laboratory time actively writing, debugging, testing, revising, and demonstrating Python programs.
+
+The laboratory emphasizes:
+
+\begin{itemize}[itemsep=0.2em]
+    \item hands-on programming,
+    \item professional software development workflows,
+    \item Git and GitHub usage,
+    \item debugging and testing,
+    \item incremental software development,
+    \item code readability and maintainability,
+    \item oral demonstration and explanation of code, and
+    \item individual understanding of submitted work.
+\end{itemize}
+
+Most lab sessions will include a short introduction, a focused programming exercise, time for development and debugging, and an instructor checkoff. During checkoffs, students may be asked to run their code, explain part of their solution, modify the code live, or answer questions about the design of their program.
+
+\section{Attendance and Participation}
+
+Because this course is highly interactive and based around in-person programming activities, attendance and participation are extremely important. Students who miss laboratory sessions may miss instructor demonstrations, checkoffs, debugging assistance, collaborative discussions, and in-class programming exercises.
+
+Laboratory exercises generally cannot be fully replicated outside the scheduled class environment. If you must miss a lab for a valid, documented reason, contact me as soon as possible.
+
+There are no Friday afternoon lab meetings. Friday mornings are reserved for tests in CPSC 250. During the week of Juneteenth, there will be no Thursday afternoon lab meeting and no Friday class meeting.
+
+\section{Git and GitHub}
+
+Students will use Git and GitHub throughout the course for version control and assignment submission. Students will learn to:
+
+\begin{itemize}[itemsep=0.2em]
+    \item fork repositories,
+    \item clone repositories,
+    \item commit changes incrementally,
+    \item push changes to GitHub,
+    \item synchronize forks with the instructor repository,
+    \item inspect commit history, and
+    \item manage project files using professional software development workflows.
+\end{itemize}
+
+GitHub repositories and commit histories will form part of the evaluation process. Students should not submit ZIP files or manually upload final code files unless specifically instructed to do so. The expected workflow is to use git commits and pushes.
+
+\section{Assessment}
+
+Over my several decades of experience in programming in many different languages, it seems to me that the most important thing that anyone can learn is that:
+
+\begin{quote}
+\textit{The only way to learn how to program in a new language is to program in the new language.}
+\end{quote}
+
+With that in mind, you will be asked to continually and continuously, throughout the course, write code in Python. In this lab course, most of that programming will occur during scheduled lab meetings. You will be expected not only to produce working code, but also to demonstrate that you understand the code that you submit.
+
+\section{Grading Policy}
+
+Final grades will be based on the following weighting distribution and scale.
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Component} & \textbf{Weight} \\
+\midrule
+In-lab programming exercises & 50\% \\
+Instructor checkoffs and demonstrations & 25\% \\
+GitHub repository and commit history & 15\% \\
+Code quality, clarity, and style & 10\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Final grades will be assigned as follows:
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+A & 87--100\% \\
+A- & 80--86\% \\
+B+ & 77--79\% \\
+B & 73--77\% \\
+B- & 70--73\% \\
+C+ & 67--69\% \\
+C & 63--67\% \\
+C- & 60--63\% \\
+D+ & 57--59\% \\
+D & 53--57\% \\
+D- & 50--53\% \\
+F & below 50\% \\
+\end{tabular}
+\end{center}
+
+All lab activities are due on the assigned date unless otherwise stated. No extensions will be given, except in the case of a valid documented reason.
+
+The evaluation of your performance in this course will be based entirely on regular laboratory work, instructor checkoffs, GitHub work, and code quality. There is no possibility to do extra work for extra credit.
+
+\section{Tentative Laboratory Schedule}
+
+The following schedule is tentative and may be adjusted as needed to support student learning and to align with the pace of CPSC 250.
+
+\begin{longtable}{@{}p{0.17\textwidth}p{0.12\textwidth}p{0.12\textwidth}p{0.49\textwidth}@{}}
+\toprule
+\textbf{Date} & \textbf{Day} & \textbf{Lab} & \textbf{Topic} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Date} & \textbf{Day} & \textbf{Lab} & \textbf{Topic} \\
+\midrule
+\endhead
+Monday 6/1 & Monday & 1 & Environment setup, PyCharm, GitHub, and first commit \\
+Tuesday 6/2 & Tuesday & 2 & Python review and git basics \\
+Wednesday 6/3 & Wednesday & 3 & Functions and modular design \\
+Thursday 6/4 & Thursday & 4 & File I/O and CSV processing \\
+\addlinespace
+Monday 6/8 & Monday & 5 & Classes and objects \\
+Tuesday 6/9 & Tuesday & 6 & Collections of objects \\
+Wednesday 6/10 & Wednesday & 7 & Object-oriented programming and operator overloading \\
+Thursday 6/11 & Thursday & 8 & Inheritance and polymorphism \\
+\addlinespace
+Monday 6/15 & Monday & 9 & Recursive functions \\
+Tuesday 6/16 & Tuesday & 10 & Searching and sorting \\
+Wednesday 6/17 & Wednesday & 11 & NumPy fundamentals \\
+Thursday 6/18 & Thursday & -- & No lab - final class day of the week \\
+Friday 6/19 & Friday & -- & No class - Juneteenth \\
+\addlinespace
+Monday 6/22 & Monday & 12 & Pandas fundamentals \\
+Tuesday 6/23 & Tuesday & 13 & Data visualization with matplotlib \\
+Wednesday 6/24 & Wednesday & 14 & Multi-file projects and Git branching \\
+Thursday 6/25 & Thursday & 15 & Integrated final programming challenge \\
+\bottomrule
+\end{longtable}
+
+\section{Use of AI Tools}
+
+AI-based tools such as ChatGPT, GitHub Copilot, Gemini, Claude, and similar systems may be useful for learning programming concepts. However, overreliance on such systems can significantly impair the development of genuine programming ability.
+
+Students are expected to understand, explain, modify, debug, and extend all submitted code. During in-person laboratory checkoffs, students may be asked to:
+
+\begin{itemize}[itemsep=0.2em]
+    \item explain portions of their code,
+    \item modify code live,
+    \item debug programs,
+    \item extend existing solutions, and
+    \item describe how their program works.
+\end{itemize}
+
+Students who cannot demonstrate understanding of submitted code may receive reduced or zero credit for the assignment. All submitted work must ultimately reflect the student's own understanding and effort.
+
+\section{Honor Code and Cheating}
+
+As all of you know, CNU has an Honor Code, which we all agreed to by both signing and giving a pledge. The spirit of that Honor Code will be strictly observed in this course.
+
+With that said, we need to have a longer discussion in computer science courses about what ``violating the honor code'' actually looks like. I offer the following, which is adapted from Princeton University's statement on cheating in computer science courses:
+
+Programming is an individual creative process much like composition. You must reach your own understanding of the problem and discover a path to its solution. During this time, discussions with other people are permitted and encouraged. However, when the time comes to write code that solves the problem, such discussions (except with me!) are no longer appropriate: the code must be your own work. If you have a question about how to use some feature of Python, or the IDE, or some other relevant application, you can certainly ask your friends or colleagues, but specific questions about code you have written must be treated more carefully.
+
+For each assignment, you must specifically describe, in comments in the code itself, whatever help, if any, that you received from others and tell me the names of any individuals with whom you collaborated. This includes help from friends, classmates, upper-level students, graduate students, your Mom, etc.
+
+Do not, under any circumstances, copy another person's code. Incorporating someone else's code into your program in any form is a violation of the Honor Code. This includes adapting solutions or partial solutions to assignments from any offering of this course or any other course. Abetting plagiarism or unauthorized collaboration by ``sharing'' your code is also prohibited. Sharing code in digital form is an especially egregious violation: do not email your code or make your source files available to anyone.
+
+Novices often have the misconception that copying and mechanically transforming a program, by rearranging independent code, renaming variables, or similar operations, makes it something different. Actually, identifying plagiarized source code is easier than you might think. Not only does plagiarized code quickly identify itself as part of the grading process, but also we can turn to software packages, such as Alex Aiken's renowned MOSS software, for automatic help.
+
+This policy supplements CNU's academic regulations, making explicit what constitutes a violation for this course.
+
+If you have any questions about these matters, please consult me. Cheating on any work will result in either a score of zero or an F for the course, and/or the filing of a case in the CNU honor court. Violation of the honor code may result in dismissal from the University.
+
+\section{University Statement on Diversity and Inclusion}
+
+The Christopher Newport University community engages and respects different viewpoints, understands the cultural and structural context in which those viewpoints emerge, and questions the development of our own perspectives and values, as these are among the fundamental tenets of a liberal arts education.
+
+Accordingly, we affirm our commitment to a campus culture that embraces the full spectrum of human attributes, perspectives, and disciplines, and offers every member of the University the opportunity to become their best self.
+
+Understanding and respecting differences can best develop in a community where members learn, live, work, and serve among individuals with diverse worldviews, identities, and values. We are dedicated to upholding the dignity and worth of all members of this academic community such that all may engage effectively and compassionately in a pluralistic society.
+
+If you have specific questions, suggestions, or concerns regarding diversity on campus please contact \href{mailto:Diversity.Inclusion@CNU.edu}{Diversity.Inclusion@CNU.edu}.
+
+\section{Disabilities and Accessibility}
+
+For a student to receive an accommodation due to a disability, that disability must be on record in the Office of Student Affairs, 3rd Floor, David Student Union (DSU). If you have a diagnosed disability, please contact Jacquelyn Barnes, Student Disability Support Specialist in Student Affairs, at 594-7160 to discuss your needs.
+
+Students with documented disabilities are to notify the instructor at least seven days prior to the point at which they require an accommodation, with the first day of class recommended, in private, if accommodation is needed. The instructor will provide students with disabilities with the reasonable accommodations approved and directed by the Office of Student Affairs. Work completed before the student notifies the instructor of his or her disability may be counted toward the final grade at the sole discretion of the instructor.
+
+\section{Success}
+
+I want you to succeed in this course and at Christopher Newport University. I encourage you to contact me during office hours or to schedule an appointment to discuss course content or to answer questions you have. If I become concerned about your course performance, attendance, engagement, or well-being, I will contact you first. I also may submit a referral through our Captains Care Program. The referral will be received by the Center for Academic Success as well as other departments when appropriate, including Counseling Services and the Office of Student Engagement. If you are an athlete, the Manager of Athletic Academic Success Programs will be notified. Someone will contact you to help determine what will help you succeed. Please remember that this is a means for me to support you and help foster your success at Christopher Newport University.
+
+\section{Public Health}
+
+The university will provide guidance on public health issues and students will be expected to comply with university protocols.
+
+\section{Academic Support}
+
+The Center for Academic Success offers free tutoring assistance for Christopher Newport students in several academic areas. Center staff offer individual assistance and/or workshops on various study strategies to help you perform your best in your courses. The center also houses the Alice F. Randall Writing Center. Writing consultants can help you at any stage of the writing process, from invention, to development of ideas, to polishing a final draft. The Center is not a proofreading service, but consultants can help you to recognize and find grammar and punctuation errors in your work as well as provide assistance with global tasks. Contact them as early in the writing process as you can!
+
+You may contact the Center for Academic Success to request a tutor, confer with a writing consultant, obtain a schedule of workshops, or make an appointment to talk with a staff member about study skills and strategies. The Center is located in Christopher Newport Hall, first floor, room 123. You may email \href{mailto:academicsuccess@cnu.edu}{academicsuccess@cnu.edu} or call 757-594-7684.
+
+\section{Course Materials}
+
+All content created and assembled by the faculty member and used in this course is to be considered intellectual property owned by the faculty member and Christopher Newport University. It is provided solely for the private use of the students currently enrolled in this course. To ensure the free and open discussion of ideas, students may not make available any of the original course content, including but not limited to lectures, discussions, videos, handouts, and/or activities, to anyone not currently enrolled in the course without the advance written permission of the instructor. This means that students may not record, download, screenshot, or in any way copy original course material for the purpose of distribution beyond this course. A violation may be considered theft. It is the student's responsibility to protect course material when accessing it outside of the physical classroom space.
+
+\end{document}

@@ -1,0 +1,355 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\titleformat{\section}
+{\large\bfseries}
+{\thesection.}{0.5em}{}
+
+\title{CPSC 250 Development Environment Setup}
+\author{Christopher Newport University}
+\date{Summer 2026}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Purpose}
+
+In CPSC 250, students will regularly run, modify, and experiment with Python code examples provided throughout the course. To support this workflow, all students should configure a working Python development environment on their personal laptop.
+
+This document walks you through:
+
+\begin{itemize}
+    \item Installing Python
+    \item Installing PyCharm
+    \item Creating a GitHub account
+    \item Forking the course repository
+    \item Cloning the repository in PyCharm
+    \item Creating a Python virtual environment
+    \item Running example Python programs
+    \item Using GitHub through PyCharm
+\end{itemize}
+
+\section{Required Software}
+
+Students must install the following software:
+
+\begin{itemize}
+    \item Python 3
+    \item PyCharm Community Edition
+    \item Git
+\end{itemize}
+
+\section{Install Python}
+
+\subsection{Windows}
+
+\begin{enumerate}
+    \item Go to:
+    \[
+    \texttt{https://www.python.org/downloads/}
+    \]
+
+    \item Download the latest version of Python 3.
+
+    \item IMPORTANT: During installation, check:
+    \begin{quote}
+    ``Add Python to PATH''
+    \end{quote}
+
+    \item Complete the installation.
+\end{enumerate}
+
+\subsection{macOS}
+
+\begin{enumerate}
+    \item Go to:
+    \[
+    \texttt{https://www.python.org/downloads/}
+    \]
+
+    \item Download the latest macOS installer.
+
+    \item Run the installer and complete installation.
+\end{enumerate}
+
+\section{Install PyCharm Community Edition}
+
+\begin{enumerate}
+    \item Go to:
+    \[
+    \texttt{https://www.jetbrains.com/pycharm/download/}
+    \]
+
+    \item Download:
+    \begin{quote}
+    PyCharm Community Edition
+    \end{quote}
+
+    \item Install using the default settings.
+\end{enumerate}
+
+\section{Install Git}
+
+\subsection{Windows}
+
+\begin{enumerate}
+    \item Go to:
+    \[
+    \texttt{https://git-scm.com/download/win}
+    \]
+
+    \item Download and install Git using the default settings.
+\end{enumerate}
+
+\subsection{macOS}
+
+Git is often already installed.
+
+Open the Terminal application and type:
+
+\begin{lstlisting}
+git --version
+\end{lstlisting}
+
+If Git is not installed, macOS will usually prompt you to install the command line developer tools automatically.
+
+\section{Create a GitHub Account}
+
+\begin{enumerate}
+    \item Go to:
+    \[
+    \texttt{https://github.com}
+    \]
+
+    \item Create a GitHub account if you do not already have one.
+
+    \item Verify that you can successfully log in.
+\end{enumerate}
+
+\section{Fork the Course Repository}
+
+The course repository contains lecture examples, sample programs, notes, and supporting materials used throughout the semester.
+
+\subsection{Course Repository}
+
+\[
+\texttt{https://github.com/brash99/cpsc250}
+\]
+
+\subsection{Fork Instructions}
+
+\begin{enumerate}
+    \item Log into GitHub.
+
+    \item Navigate to:
+    \[
+    \texttt{https://github.com/brash99/cpsc250}
+    \]
+
+    \item Click the ``Fork'' button near the upper-right corner.
+
+    \item GitHub will create your own personal copy of the repository.
+\end{enumerate}
+
+\section{Clone Your Fork Using PyCharm}
+
+\begin{enumerate}
+    \item Open PyCharm.
+
+    \item Select:
+    \begin{quote}
+    Get from VCS
+    \end{quote}
+
+    \item Log into GitHub when prompted.
+
+    \item IMPORTANT:
+    Select YOUR fork of the repository, NOT the instructor repository.
+
+    \item Choose a local directory for the project.
+
+    \item Click:
+    \begin{quote}
+    Clone
+    \end{quote}
+\end{enumerate}
+
+\section{Create a Python Virtual Environment}
+
+PyCharm will usually offer to create a virtual environment automatically.
+
+Accept the default settings.
+
+If needed, you can manually create one later.
+
+\subsection{Windows PowerShell}
+
+\begin{lstlisting}
+python -m venv venv
+\end{lstlisting}
+
+Activate:
+
+\begin{lstlisting}
+.\venv\Scripts\Activate.ps1
+\end{lstlisting}
+
+\subsection{macOS Terminal}
+
+\begin{lstlisting}
+python3 -m venv venv
+\end{lstlisting}
+
+Activate:
+
+\begin{lstlisting}
+source venv/bin/activate
+\end{lstlisting}
+
+\section{Install Required Packages}
+
+If the repository contains a \texttt{requirements.txt} file, install packages using:
+
+\subsection{Windows PowerShell}
+
+\begin{lstlisting}
+pip install -r requirements.txt
+\end{lstlisting}
+
+\subsection{macOS Terminal}
+
+\begin{lstlisting}
+pip3 install -r requirements.txt
+\end{lstlisting}
+
+\section{Run an Example Program}
+
+\begin{enumerate}
+    \item Open one of the example Python files in the repository.
+
+    \item Right-click inside the editor window.
+
+    \item Select:
+    \begin{quote}
+    Run
+    \end{quote}
+
+    \item Verify that the program executes successfully.
+\end{enumerate}
+
+\section{Make a Small Test Change}
+
+To verify that GitHub integration works correctly:
+
+\begin{enumerate}
+    \item Open a Python file.
+
+    \item Add a simple comment such as:
+\end{enumerate}
+
+\begin{lstlisting}
+# Testing my development environment
+\end{lstlisting}
+
+\section{Commit and Push Using PyCharm}
+
+\begin{enumerate}
+    \item In PyCharm, select:
+    \begin{quote}
+    Git $\rightarrow$ Commit
+    \end{quote}
+
+    \item Enter a commit message such as:
+\end{enumerate}
+
+\begin{lstlisting}
+Test commit
+\end{lstlisting}
+
+\begin{enumerate}[resume]
+    \item Commit the changes.
+
+    \item Then select:
+    \begin{quote}
+    Git $\rightarrow$ Push
+    \end{quote}
+
+    \item Verify that the changes appear in your GitHub repository.
+\end{enumerate}
+
+\section{Windows PowerShell vs Git Bash}
+
+These instructions use Windows PowerShell as the default Windows terminal environment because:
+
+\begin{itemize}
+    \item PowerShell is installed by default on modern Windows systems.
+    \item It integrates well with PyCharm.
+    \item It works well with GitHub and GitHub CLI.
+    \item It minimizes additional installation complexity.
+\end{itemize}
+
+Some other courses may use Git Bash instead. Either environment can work successfully for Python development.
+
+\section{Troubleshooting}
+
+\subsection{Python Not Found}
+
+Verify installation:
+
+\begin{lstlisting}
+python --version
+\end{lstlisting}
+
+or on macOS:
+
+\begin{lstlisting}
+python3 --version
+\end{lstlisting}
+
+\subsection{Git Not Found}
+
+Verify installation:
+
+\begin{lstlisting}
+git --version
+\end{lstlisting}
+
+\subsection{Push Authentication Problems}
+
+Use PyCharm's built-in GitHub login system rather than manually entering passwords or tokens.
+
+\section{Final Verification Checklist}
+
+Before class begins, verify that you can:
+
+\begin{itemize}
+    \item Run Python programs
+    \item Open the repository in PyCharm
+    \item Commit changes
+    \item Push changes to GitHub
+    \item Pull updates from GitHub
+\end{itemize}
+
+\end{document}
